@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-size: 16px; */
+    line-height: 1.5;
+    background-color: black;
+    color: aliceblue;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+p {
+    margin: 0 0 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.bayan-item {
+    border: 2px dotted red;
+    margin-bottom: 5px;
+}
+
+.bayan-item-title {
+    display: block;
+    /* cursor: pointer; */
+    position: relative;
+    padding: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.bayan-item-title:after {
+    content: '+';
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: red;    
+}
+
+/* .bayan-item-title:hover {
+    background-color: blueviolet;
+} */
+
+.bayan-item-input {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+.bayan-img {
+    /* display: block;
+    text-align: center; */
+}
+
+.bayan-item-input:checked ~ .bayan-item-title:after  {
+    transform: rotate(45deg);
+}
+.css-bayan:hover .bayan-item-title:after  {
+    display: block;
+}
+
+/* .bayan-item-input:checked ~ .bayan-item-text {
+    display: block;
+} */
+
+.bayan-item-text {
+    display: none;
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+    /* cursor: pointer; */
+}
+
+.bayan-item:hover .bayan-item-text {
+    display: block;
+    animation: shows 1s;
+}
+.bayan-item:hover .bayan-item-title:after  {
+    color: aqua;
+    transform: rotate(45deg);
+}
+
+.bayan-item-input:checked ~ .bayan-item-text {
+    display: block;
+}
+
+@keyframes shows {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .css-bayan{
+        cursor: wait;
+    }
+    .bayan-item-title {
+        cursor: wait;
+    }
+}
+
+/* Курсор при наведении на ряды гармошки меняется +5 */
+/* Используются только гибкие размеры rem, em, %, vh, vw, frи т.д... Гармошка отзывчивая +10 */
+
+h1 {
+    font-size: calc(2rem + 1.1vw);
+}
+
+p {
+    font-size: calc(0.5rem + 1.1vw); 
+}
+
+.bayan-item-title {
+    font-size: calc(1rem + 1.1vw); 
+}
