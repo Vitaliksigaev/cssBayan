@@ -1,0 +1,229 @@
+/* body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: black;
+    color: aliceblue;
+    max-width: 75vw;
+    margin: 3% auto;
+    padding: 3%;
+}
+
+p {
+    margin: 0 0 3%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.bayan-item {
+    border: 0.2rem dotted red;
+}
+
+.bayan-item-title {
+    display: block;
+    position: relative;
+    padding: 3%;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.bayan-item-title:after {
+    content: '+';
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: red;    
+}
+
+.bayan-item-input {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.bayan-item-input:checked ~ .bayan-item-title:after  {
+    transform: rotate(45deg);
+}
+.css-bayan:hover .bayan-item-title:after  {
+    display: block;
+}
+
+.bayan-item-text {
+    display: none;
+    font-size: 1rem;
+    padding: 3%;
+    text-align: center;
+    z-index: 0;
+}
+
+.bayan-item:hover .bayan-item-text {
+    display: block;
+    animation: shows 1s;
+}
+.bayan-item:hover .bayan-item-title:after  {
+    color: rgb(208, 255, 0);
+    transform: rotate(45deg);
+}
+
+.bayan-item-input:checked ~ * .bayan-item-text {
+    display: block;
+}
+
+@keyframes shows {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .css-bayan{
+        cursor: wait;
+    }
+    .bayan-item-title {
+        cursor: wait;
+    }
+}
+@media screen and (max-width: 640px) {
+    body {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+}
+@media screen and (max-width: 320px) {
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+} */
+
+/* Курсор при наведении на ряды гармошки меняется +5 */
+/* Используются только гибкие размеры rem, em, %, vh, vw, frи т.д... Гармошка отзывчивая +10 */
+
+/* h1 {
+    font-size: calc(2rem + 0.5vw);
+}
+
+p {
+    font-size: calc(0.5rem + 0.5vw); 
+}
+
+.bayan-item-title {
+    font-size: calc(1rem + 0.5vw); 
+} */
+
+
+
+/* =============================== VERSIA 2*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: black;
+    color: aliceblue;
+    max-width: 75vw;
+    margin: 3% auto;
+    padding: 3%;
+}
+
+h1 {
+    font-size: calc(2rem + 0.5vw);
+}
+
+p {
+    font-size: calc(0.5rem + 0.5vw); 
+}
+
+.bayan-item-title {
+    font-size: calc(1rem + 0.5vw); 
+}
+
+.bayan-item {
+    border: 0.2rem dotted red;
+}
+
+.bayan-item-input {
+    /* visibility: hidden;
+    width: 0;
+    height: 0;
+    appearance: none; */
+    display: none;
+}
+
+.bayan-item__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+}
+.bayan-item__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    font-size: 1rem;
+    padding: 3%;
+    text-align: center;
+    z-index: 0;
+}
+
+.bayan-item:hover .bayan-item__content {
+    display: block;
+    animation: shows 2s;
+}
+
+.bayan-item-input:checked ~ * .bayan-item__content {
+    display: block;
+}
+
+.bayan-item__icon {
+    display: none;
+}
+
+.css-bayan:hover .bayan-item__icon  {
+    display: block;
+    animation: shows 2s;
+}
+
+.bayan-item-input:checked ~ .bayan-item-title .bayan-item__icon {
+    transform: rotate(45deg);
+    animation: shows 2s;
+    color: brown;
+}
+.bayan-item-input:hover ~ .bayan-item-title .bayan-item__icon {
+    transform: rotate(45deg);
+    animation: shows 2s;
+    color: brown;
+}
+
+@keyframes shows {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .css-bayan{
+        cursor: wait;
+    }
+    .bayan-item-title {
+        cursor: wait;
+    }
+}
+@media screen and (max-width: 640px) {
+    body {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+}
+@media screen and (max-width: 320px) {
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
